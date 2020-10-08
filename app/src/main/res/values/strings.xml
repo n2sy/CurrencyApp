@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CurrencyApp</string>
+    <string name="msg">Entrez une valeur</string>
+</resources>

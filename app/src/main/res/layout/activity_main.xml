@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:weightSum="1"
+    android:orientation="vertical"
+
+    >
+
+    <EditText
+        android:id="@+id/montant"
+        android:layout_width="369dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:ems="10"
+        android:hint="@string/msg"
+        android:inputType="numberDecimal" />
+
+    <RadioGroup
+        android:layout_width="364dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.13">
+
+
+        <RadioButton
+            android:id="@+id/radioDinarEuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dinar => Euro"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/radioEuroDinar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Euro => Dinar"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/Result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100px"
+        android:layout_weight="0.12"
+        android:textColor="#BF1A1A"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:onClick="fctConvert"
+        android:text="Convert" />
+
+</LinearLayout>
+
+
