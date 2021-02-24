@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">CurrencyApp</string>
-    <string name="msg">Entrez une valeur</string>
+    <string name="msg">Entrez une valeur Nidhal</string>
+    <string name="resultat"> %1$f %2$s !</string>
+
+
+
+
+
 </resources>
+

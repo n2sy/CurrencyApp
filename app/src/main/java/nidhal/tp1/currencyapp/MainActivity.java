@@ -9,6 +9,7 @@ import android.icu.text.DecimalFormat;
 import android.os.Bundle;
 //import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton r2;
     private EditText txtSrc;
     private TextView txtOut;
+//    private Button btn;
 
 
     private double res;
@@ -30,10 +32,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        r1 = (RadioButton) findViewById(R.id.radioDinarEuro);
-        this.txtSrc = (EditText) this.findViewById(R.id.montant);
-        this.txtOut = (TextView) this.findViewById(R.id.Result);
-        this.r2 = (RadioButton) this.findViewById(R.id.radioEuroDinar);
+        this.r1 = findViewById(R.id.radioDinarEuro);
+        this.txtSrc = (EditText) findViewById(R.id.montant);
+        this.txtOut = (TextView) findViewById(R.id.Result);
+        this.r2 = (RadioButton) findViewById(R.id.radioEuroDinar);
+//        this.btn = (Button) findViewById(R.id.btnC);
+//
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                fctConvert(v);
+//            }
+//        });
+
+
 
     }
 
@@ -43,13 +54,15 @@ public class MainActivity extends AppCompatActivity {
         if(r1.isChecked())
         {
             res = Float.parseFloat(txtSrc.getText().toString()) / 3.4;
-            txtOut.setText(res + " Euros");
-
+            //txtOut.setText(res + " euros");
+            txtOut.setText(getString(R.string.resultat, res, " euros !"));
+            //txtOut.setText(getString(R.string.res_euros, res))
         }
         else if(r2.isChecked())
         {
             res = Float.parseFloat(txtSrc.getText().toString()) * 3.4;
-            txtOut.setText(res + " TND");
+            //txtOut.setText(res + " Dinars");
+            txtOut.setText(getString(R.string.resultat, res, " dinars"));
 
         }
         else {
